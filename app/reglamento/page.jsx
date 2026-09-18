@@ -1,0 +1,2 @@
+import PageHero from '../components/PageHero';
+export default function Rules() { return <PageHero kicker="JUEGO LIMPIO" title="Reglamento oficial." description="Todo lo que necesitas saber para jugar con confianza y disfrutar cada encuentro."><div className="rule-list" id="preguntas"><p><b>01</b> Cada equipo busca pasar sus bolas por los arcos en el menor número de golpes.</p><p><b>02</b> El respeto por los turnos y por todos los jugadores es parte del juego.</p><p><b>03</b> Consulta el reglamento completo antes de competir en un torneo oficial.</p></div></PageHero>; }

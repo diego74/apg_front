@@ -1,0 +1,1 @@
+.nav-expand{border:0;background:transparent;color:#fff;font-size:16px;padding:8px 0 8px 7px;cursor:pointer}.nav-item>a{display:block}@media(max-width:760px){.nav-item{display:grid;grid-template-columns:1fr auto}.nav-item>a{display:block;padding:13px 0;font-size:14px}.nav-expand{padding:8px 4px}.dropdown{grid-column:1/-1}}
