@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { HomeBanner, HomeImage, HomeInfoLink, IntroBand, Kicker, TextLink, QuickLinks } from './components/styles';
 
 export default function Home() {
-  return <main>
+  return <main style={{ background: '#fff' }}>
     <HomeBanner>
       <HomeImage src="/images/home-gateball.jpeg" alt="III Panamericano de Gateball, Perú 2027" fetchPriority="high" />
       <HomeInfoLink href="/panamericano-2027">Más info <span aria-hidden="true">↗</span></HomeInfoLink>

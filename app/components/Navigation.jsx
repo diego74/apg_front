@@ -19,7 +19,7 @@ export default function Navigation() {
   return <Header>
     <Nav aria-label="Navegación principal">
       <Logo href="/" onClick={() => setMobileOpen(false)}><span>APG</span><small>ASOCIACIÓN PERÚ GATEBALL</small></Logo>
-      <MenuToggle aria-label="Abrir menú" aria-expanded={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)}><i></i><i></i><i></i></MenuToggle>
+      <MenuToggle $open={mobileOpen} aria-label={mobileOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)}><i></i><i></i><i></i></MenuToggle>
       <NavLinks $open={mobileOpen}>
         {menu.map((section, index) => <NavItem key={section.label} onMouseEnter={() => setOpen(section.items?.length ? index : null)} onMouseLeave={() => setOpen(null)}>
           <Link href={section.href} onFocus={() => setOpen(section.items?.length ? index : null)} onClick={() => setMobileOpen(false)}>{section.label}</Link>
