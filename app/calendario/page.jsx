@@ -1,3 +1,3 @@
 import PageHero from '../components/PageHero';
-const events=[['12','ABR','Campeonato Apertura','Campo APG · Lima'],['21','JUN','Torneo Metropolitano','Sede central · Lima'],['09','AGO','Copa de la Amistad','Campo APG · Lima']];
-export default function Calendar() { return <PageHero kicker="TEMPORADA 2026" title="El juego nos espera." description="Guarda las fechas y acompaña a la comunidad APG durante toda la temporada."><div className="event-list" id="torneos">{events.map(([day,month,name,place])=><article key={name}><div><b>{day}</b><span>{month}</span></div><p><strong>{name}</strong><small>{place}</small></p><i>Ver evento →</i></article>)}</div></PageHero>; }
+import CalendarEvents from './CalendarEvents';
+export default function Calendar() { return <PageHero kicker="TEMPORADA 2026" title="El juego nos espera." description="Guarda las fechas y acompaña a la comunidad APG durante toda la temporada."><CalendarEvents /></PageHero>; }

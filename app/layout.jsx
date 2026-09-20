@@ -1,6 +1,5 @@
-import './globals.css';
-import './menu.css';
-import Navigation from './components/Navigation';
+import StyledRegistry from './components/StyledRegistry';
+import AppFrame from './components/AppFrame';
 
 export const metadata = {
   title: 'APG | Asociación Perú Gateball',
@@ -8,5 +7,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="es"><body><Navigation />{children}<footer><span>APG</span><p>Asociación Perú Gateball · Construyendo comunidad desde el deporte.</p></footer></body></html>;
+  return <html lang="es"><head><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" /></head><body><StyledRegistry><AppFrame>{children}</AppFrame></StyledRegistry></body></html>;
 }

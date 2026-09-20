@@ -1,5 +1,5 @@
-import Link from 'next/link';
+import { InnerPage, PageIntro, Kicker } from './styles';
 
 export default function PageHero({ kicker, title, description, children }) {
-  return <main className="inner-page"><section className="page-intro"><p className="kicker">{kicker}</p><h1>{title}</h1><p>{description}</p>{children}</section></main>;
+  return <InnerPage><PageIntro><Kicker>{kicker}</Kicker><h1>{title}</h1><p>{description}</p>{children}</PageIntro></InnerPage>;
 }
