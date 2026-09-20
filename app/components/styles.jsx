@@ -95,6 +95,38 @@ export const HomeImage = styled.img`
 export const Kicker = styled.p`
   font:600 11px 'DM Mono',monospace; letter-spacing:.15em; margin:0 0 20px; color:var(--red);
 `;
+// Shared public-page primitives. Keep page structure and responsive spacing in one
+// place so individual routes only describe their content.
+export const PublicPage = styled.main`
+  min-height:calc(100vh - 84px); color:#102237; background:#f7f7f4;
+  @media(max-width:900px) { min-height:calc(100vh - 72px); }
+`;
+export const Container = styled.div`
+  width:min(calc(100% - var(--page-gutter) - var(--page-gutter)),var(--page-width)); margin:0 auto;
+`;
+export const PublicHero = styled.header`
+  display:grid; grid-template-columns:minmax(0,1.25fr) minmax(280px,.65fr); gap:48px; align-items:flex-end;
+  padding:clamp(72px,8vw,124px) 0 clamp(48px,6vw,88px); border-bottom:1px solid #d9dfdc;
+  h1 { max-width:950px; margin:0; font:600 clamp(3rem,6vw,6.4rem)/.96 Unbounded,sans-serif; letter-spacing:-.08em; }
+  @media(max-width:900px) { grid-template-columns:1fr; gap:24px; }
+  @media(max-width:600px) { padding-top:54px; h1 { font-size:clamp(2.65rem,13vw,4.2rem); } }
+`;
+export const Eyebrow = styled(Kicker)`
+  margin-bottom:18px; font-weight:700; letter-spacing:.18em; text-transform:uppercase;
+`;
+export const HeroText = styled.p`
+  margin:0 0 8px; color:#5b6670; font-size:clamp(16px,1.25vw,20px); line-height:1.65;
+  @media(max-width:900px) { max-width:680px; }
+`;
+export const Section = styled.section`
+  padding:clamp(64px,8vw,120px) 0;
+`;
+export const SectionHeader = styled.div`
+  display:flex; align-items:flex-end; justify-content:space-between; gap:32px; margin-bottom:40px;
+  h2 { margin:0; font:600 clamp(2rem,3.4vw,4rem)/1.04 Unbounded,sans-serif; letter-spacing:-.065em; }
+  p { max-width:540px; margin:0; color:#64706f; line-height:1.65; }
+  @media(max-width:600px) { display:block; p { margin-top:18px; } }
+`;
 export const IntroBand = styled.section`
   width:min(calc(100% - var(--page-gutter) - var(--page-gutter)),var(--page-width)); margin:0 auto; padding:clamp(82px,9vw,140px) 0; display:grid; grid-template-columns:1.3fr .8fr; gap:32px; background:#fff;
   ${Kicker} { grid-column:1/-1; }
